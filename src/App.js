@@ -2,13 +2,15 @@ import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
+  console.log(556) 
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          rifiurefruiefoeEdit <code>src/App.js</code> and save to reload. паша
-          учит меня программированию
+          rifiurefruiefoeEdit <code>src/App.js</code> and save to reload. мы
+          приехали в солигалич на новый год
         </p>
         <a
           className="App-link"
@@ -16,7 +18,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Pasech
+          Papa
         </a>
       </header>
     </div>
