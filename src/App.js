@@ -1,26 +1,21 @@
-import logo from "./logo.svg";
-import "./App.css";
+import React, { useState } from "react";
 
 function App() {
-  console.log(556) 
-
+  const [value, setValue] = useState("");
+  const [value1, setValue1] = useState("something");
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          rifiurefruiefoeEdit <code>src/App.js</code> and save to reload. мы
-          приехали в солигалич на новый год
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Papa
-        </a>
-      </header>
+    <div>
+      <input value={value} onChange={(event) => setValue(event.target.value)} />
+      <p>text1: {value}</p>
+      <input
+        name="myco"
+        value={value1}
+        onChange={(event) => {
+          setValue1(event.target.value);
+          console.log(event.type);
+        }}
+      />
+      <p>text2: {value1}</p>
     </div>
   );
 }
