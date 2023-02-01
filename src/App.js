@@ -15,7 +15,7 @@ function App() {
           console.log(event.type);
         }}
       />
-      <p>text2: {value1}</p>
+      <p>text2: {value1.length}</p>
     </div>
   );
 }
