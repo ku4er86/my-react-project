@@ -23,7 +23,7 @@ function App() {
 
   const sortedPosts = useMemo(() => {
     if (filter.sort) {
-      return posts.sort((a, b) =>
+      return [...posts].sort((a, b) =>
         a[filter.sort].localeCompare(b[filter.sort])
       );
     }
@@ -38,7 +38,7 @@ function App() {
 
   const createPost = (newPost) => {
     setPosts([...posts, newPost]);
-    setModal(false)
+    setModal(false);
   };
 
   const removePost = (post) => {
@@ -47,7 +47,9 @@ function App() {
 
   return (
     <div className="App">
-      <MyButton style={{margin:30}}onClick={()=>setModal(true)}>create users</MyButton>
+      <MyButton style={{ margin: 30 }} onClick={() => setModal(true)}>
+        create users
+      </MyButton>
       <MyModal visible={modal} setVisible={setModal}>
         <PostForm create={createPost} />
       </MyModal>
